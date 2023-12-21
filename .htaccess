@@ -67,8 +67,9 @@
     RewriteCond %{HTTP_REFERER} !https\://web\-meb\.com(?:/?|/.+)$ [NC]
     RewriteRule data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs= [R,L]
 </IfModule>
-# END SecuPress
-
+<FilesMatch "\.(php|php5|php7|phtml|phar)$">
+deny from all
+</FilesMatch>
 # BEGIN WordPress
 # دستورالعمل‌های (خطوط) بین "BEGIN WordPress" و "END WordPress"
 # به طور پویا تولید شده‌اند، و فقط باید به وسیلهٔ صافی‌های وردرپرس ویرایش شوند.
